@@ -1,0 +1,33 @@
+/* style.css */
+
+/* --- Global Styles --- */
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- Navigation Styles --- */
+/* Note: You used #23c566 here, but your Tailwind config 
+   defines 'brand-dark' as #65a30d. You might want to update 
+   this to match your brand consistency.
+*/
+.nav-link.active {
+    color: #23c566; 
+    font-weight: 600;
+}
+
+/* --- Page Visibility Logic --- */
+/* Used for toggling sections without reloading */
+.page-content {
+    display: none;
+    animation: fadeIn 0.3s ease-in-out; /* Optional: Adds a smooth fade effect */
+}
+
+.page-content.active {
+    display: block;
+}
+
+/* Optional: Simple fade in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
